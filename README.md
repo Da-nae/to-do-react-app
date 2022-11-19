@@ -2,11 +2,11 @@
 
 It's a Becode project, the goal is to make a usable to do web app with React.
 
-You can see the finish project `[here](YOURLINK.com).`
+You can see the finish project [here](https://spontaneous-maamoul-234107.netlify.app/).
 
 ## **Who did this project ?**
 
-`[Danaé Grosjean](https://github.com/Da-nae)`
+[Danaé Grosjean](https://github.com/Da-nae)
 
 ## **Why create this projet ?**
 
