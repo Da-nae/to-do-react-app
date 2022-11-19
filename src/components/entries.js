@@ -2,8 +2,8 @@ import Checkboxes from './checkboxes.js';
 import React, { useState } from "react";
 
 function Entries() {
-    const firstEntries = ['Style this page','Learn React','Be cool'];
-    const [toDoEntries, doneEntries] = useState(firstEntries);
+    const initialEntries = ['Style this page','Learn React','Be cool'];
+    const [entries, setEntries] = useState(initialEntries);
         /* 
         * useState returns two values inside an array
         -> const myState = useState(...);
@@ -16,8 +16,8 @@ function Entries() {
     return (
         <section className="toDoEntries">
             <ul>
-                {firstEntries.map((entry) => (
-                    <li>
+                {entries.map((entry, index) => (
+                    <li key={index}>
                         <Checkboxes />
                         <p className="toDoSingleEntries">{entry}</p>
                     </li>
