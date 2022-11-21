@@ -1,8 +1,11 @@
-import Checkboxes from './checkboxes.js';
 import React, { useState } from "react";
 
 function Entries() {
-    const initialEntries = ['Style this page','Learn React','Be cool'];
+    const initialEntries = [
+        {name :'Style this page', complete : false},
+        {name :'Learn React', complete : false},
+        {name :'Be cool', complete : true}
+    ];
     const [entries, setEntries] = useState(initialEntries);
         /* 
         * useState returns two values inside an array
@@ -12,14 +15,13 @@ function Entries() {
         * The second value is always a function that let's me update the current state
         -> const setTodos = myState[1];
         */
-
     return (
         <section className="toDoEntries">
             <ul>
                 {entries.map((entry, index) => (
                     <li key={index}>
-                        <Checkboxes />
-                        <p className="toDoSingleEntries">{entry}</p>
+                        <input type="checkbox" defaultChecked={entry.complete}/>
+                        <p className="toDoSingleEntries">{entry.name}</p>
                     </li>
                 ))}
             </ul>
