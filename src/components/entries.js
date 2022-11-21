@@ -9,6 +9,7 @@ function Entries() {
     const [entries, setEntries] = useState(initialEntries);
     const handleChange = () => {
         console.log(entries);
+        console.log(setEntries);
         // setEntries(!entries);
     };
 /* 
