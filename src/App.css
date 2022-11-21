@@ -40,23 +40,27 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  margin: 20px 0px;
 }
 
 .toDoEntries ul {
   padding: 0px;
 }
 
-.toDoEntries p {
+.toDoEntries label {
   margin-left: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
-input[type="checkbox"] {
-  border: 2px solid darksalmon;
-  border-radius: 5px;
+input {
   cursor: pointer;
 }
+
+input:checked + label {
+  text-decoration: line-through;
+}
+
 
 .newEntryStyle {
   display: flex;
