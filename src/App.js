@@ -9,8 +9,10 @@ function App() {
     <div className="App">
       <Title />
       <Entries />
-      <Newentry />
-      <Submit />
+      <div className='newEntryStyle'>
+        <Newentry />
+        <Submit />
+      </div>
     </div>
   );
 }
