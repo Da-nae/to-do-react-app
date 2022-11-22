@@ -1,12 +1,20 @@
 import React, { useRef } from "react";
 
-function Newentry() {
+function Newentry(prop) {
     const inputRef = useRef();
 
     function clickHandler() {
-        const inputElement = inputRef.current;
 
-        // Do something with inputElement...
+        const inputElement = inputRef.current;
+        const newEntries = {
+            name : inputElement.value,
+            complete : false
+        }
+
+        const newInitialEntries = JSON.parse(JSON.stringify(prop.entries));
+        newInitialEntries.push(newEntries);
+        prop.setEntries(newInitialEntries);
+
         console.log(inputElement.value);
     }
 
