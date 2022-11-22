@@ -14,8 +14,6 @@ function Newentry(prop) {
         const newInitialEntries = JSON.parse(JSON.stringify(prop.entries));
         newInitialEntries.push(newEntries);
         prop.setEntries(newInitialEntries);
-
-        console.log(inputElement.value);
     }
 
     return(
