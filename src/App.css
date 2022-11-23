@@ -89,13 +89,23 @@ input:checked + label {
 }
 
 .deleteButton {
+  position: relative;
   margin-left: 10px;
-  border-radius: 50%;
-  border: 0px solid;
-  width: 20px;
-  height: 20px;
+  border: 0px;
   text-align: center;
-  background-color: bisque;
   color: darksalmon;
   font-size: 15px;
+  background-color: rgba(255, 228, 196, 0);
+  z-index: 0;
+}
+
+.deleteButton::before {
+  content : "";
+  background-color: bisque;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position : absolute;
+  z-index: -1;
+  right: 0.2px;
 }
