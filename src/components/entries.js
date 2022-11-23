@@ -15,6 +15,12 @@ function Entries(prop) {
         prop.setEntries(checkedEntry);
     };
 
+    const handleRemove = id => {
+        const newEntries = [...prop.entries].filter(entry => entry.id !== id);
+        prop.setEntries(newEntries);
+        localStorage.setItem(LSKEY + ".entries", JSON.stringify(newEntries))
+    }
+
     return (
         <section className="toDoEntries">
             <ul>
@@ -29,6 +35,10 @@ function Entries(prop) {
                             id={entry.id}
                         />
                         <label className="toDoSingleEntries" htmlFor={entry.id}>{entry.name}</label>
+                        <button 
+                            className="deleteButton" 
+                                onClick={() => handleRemove(entry.id)}
+                        >x</button>
                     </li>
                 ))}
             </ul>

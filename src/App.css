@@ -87,3 +87,15 @@ input:checked + label {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
+
+.deleteButton {
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 0px solid;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: bisque;
+  color: darksalmon;
+  font-size: 15px;
+}
