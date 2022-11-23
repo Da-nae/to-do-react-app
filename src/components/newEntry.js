@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+const { v4: uuidv4 } = require('uuid')
 
 function Newentry(prop) {
     const inputRef = useRef();
@@ -8,7 +9,8 @@ function Newentry(prop) {
         const inputElement = inputRef.current;
         const newEntries = {
             name : inputElement.value,
-            complete : false
+            complete : false,
+            id: uuidv4()
         }
 
         const newInitialEntries = JSON.parse(JSON.stringify(prop.entries));

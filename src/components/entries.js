@@ -2,33 +2,33 @@ import React from "react";
 
 function Entries(prop) {
 
-    const LSKEY = "MyTodoApp";
+    const handleChange = (id) => {
+        const checkedEntry = prop.entries.map((entry) => {
+            if (entry.id == id) {
+                entry.complete = !entry.complete;
+            }
 
-    const handleChange = () => {
-        // const checkedEntry = {
-        //     name : prop.saveEntries.name,
-        //     complete : !prop.saveEntries.complete
-        // }
+            return entry;
+        });
 
-        // const updateEntries = JSON.parse(JSON.stringify(prop.saveEntries));
-        // updateEntries.push(checkedEntry);
-        // prop.setEntries(updateEntries);
-
-        // const newEntries = [...prop.saveEntries];
-        // prop.saveEntries.complete = !prop.saveEntries.complete;
-        // console.log(newEntries);
-        // prop.setEntries(newEntries);
-        // localStorage.setItem(LSKEY, JSON.stringify(prop.setEntries));
+        prop.setEntries(checkedEntry);
     };
 
     return (
         <section className="toDoEntries">
             <ul>
-                {prop.entries.map((entry, index) => (
+                {prop.entries.map((entry) => (
 
-                    <li key={index}>
-                        <input type="checkbox" defaultChecked={entry.complete} onChange={handleChange} id={index}/>
-                        <label className="toDoSingleEntries" htmlFor={index}>{entry.name}</label>
+                    <li 
+                        key={entry.id} 
+                        className={entry.complete ? "true" : "false"}
+                    >
+                        <input 
+                            type="checkbox" 
+                            onChange={() => {handleChange(entry.id)}}
+                            id={entry.id}
+                        />
+                        <label className="toDoSingleEntries" htmlFor={entry.id}>{entry.name}</label>
                     </li>
                 ))}
             </ul>
