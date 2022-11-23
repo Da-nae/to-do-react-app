@@ -66,7 +66,7 @@ input:checked + label {
   margin-bottom: 20px;
 }
 
-.form button {
+.formButton {
   background-color: bisque;
   border: 2px solid bisque;
   border-radius: 5px;
@@ -76,12 +76,12 @@ input:checked + label {
   cursor: pointer;
 }
 
-.form button:hover {
+.formButton:hover {
   background-color: darksalmon;
   border: 2px solid darksalmon;
 }
 
-.form input {
+.inputText {
   border: 2px solid darksalmon;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;

@@ -20,10 +20,12 @@ function Newentry(prop) {
 
     return(
         <section className="form">
-            <input ref={inputRef} type="text" placeholder="New task"></input>
-            <div>
-                <button onClick={clickHandler}>Submit</button>
-            </div>
+            <input className="inputText" ref={inputRef} type="text" placeholder="New task" 
+            onKeyPress={(e) => {if(e.key == "Enter") {
+                clickHandler();
+            }}}
+            />
+            <input className="formButton" type ="submit" onClick={clickHandler} />
         </section>
     )
 }

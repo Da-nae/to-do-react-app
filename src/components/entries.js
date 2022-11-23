@@ -1,6 +1,7 @@
 import React from "react";
 
 function Entries(prop) {
+    const LSKEY = "MyTodoApp";
 
     const handleChange = (id) => {
         const checkedEntry = prop.entries.map((entry) => {
@@ -18,13 +19,12 @@ function Entries(prop) {
         <section className="toDoEntries">
             <ul>
                 {prop.entries.map((entry) => (
-
                     <li 
                         key={entry.id} 
                         className={entry.complete ? "true" : "false"}
                     >
                         <input 
-                            type="checkbox" 
+                            type="checkbox" checked={entry.complete}
                             onChange={() => {handleChange(entry.id)}}
                             id={entry.id}
                         />
