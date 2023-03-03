@@ -15,11 +15,3 @@ It's a Becode Challenge, the goal is to learn about React.
 ## **What language are used?**
 
 HTML, SCSS and Javascript.
-
-## **What was the easiest part ?**
-
-/ to be completed
-
-## **What was the hardest part ?**
-
-/ to be completed
